@@ -161,7 +161,7 @@ function retry(func, attempts) {
       try {
         answer = func();
       } catch (error) {
-        console.log(`Attempt ${i + 1} failed: ${error.message}`);
+        answer = error;
       }
     }
     return answer;
